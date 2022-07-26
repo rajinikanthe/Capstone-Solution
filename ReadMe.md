@@ -1,6 +1,6 @@
 ## Task 0: Environment Setup
-  #0.1 Spin up an ec2 t2.micro with a security group that allows us to ssh into the machine
-  #0.2 Create and attach IAM role with AdministratorAccess to the ec2
+  # 0.1 Spin up an ec2 t2.micro with a security group that allows us to ssh into the machine
+  # 0.2 Create and attach IAM role with AdministratorAccess to the ec2
   ![image](https://user-images.githubusercontent.com/97882602/180923880-913c0142-2515-4702-a23a-85328d1b277b.png)
 
   
