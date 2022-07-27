@@ -1,0 +1,16 @@
+*.bash_history
+*.bash_logout
+*.bashrc
+.cache/
+.docker/
+.kube/
+*.profile
+.ssh/
+*.sudo_as_admin_successful
+.terraform.d/
+*.viminfo
+aws/
+*awscliv2.zip
+kubectl
+*kubectl.sha256
+
