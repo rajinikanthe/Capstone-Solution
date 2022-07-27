@@ -109,6 +109,7 @@
   terraform apply
   ````
   ![tf vpc module implementation](https://user-images.githubusercontent.com/97882602/181165913-5222fb43-77c7-4843-bb74-5ec517a97cdf.PNG)
+  
   ![Created outputs for VPC and Subet IDs](https://user-images.githubusercontent.com/97882602/181165925-b8f75733-facb-430f-a45e-2a993bdbae07.PNG)
   
   ## 1.6 Update the VPC and subnet IDs in eks-conf.yaml file from stub siles.
@@ -144,7 +145,9 @@
   
   No other change req
   ![image](https://user-images.githubusercontent.com/97882602/181167701-a03eb532-2833-4ddd-aba2-2253cd6d7be0.png)
+  
   ![image](https://user-images.githubusercontent.com/97882602/181167758-d8a2e423-0be4-4baf-9a16-36de38cbcf82.png)
+  
   
   ## 2.2 Write a Dockerfile to dockerise the upg-loadme nodejs application. 
   ````
@@ -174,6 +177,9 @@
   ````
   The image id should be displayed after docket images command. Make sure you are using the latest image ID.
   
+  ## 2.6 Check if the application is online by hitting "<ec2 ip>:8081" in browser.
+  ![4  Docker Container is running and accessible from browser](https://user-images.githubusercontent.com/97882602/181169549-ae96e0e3-dacc-4910-9cd1-1e2b28a56d36.PNG)
+
   
   
   
