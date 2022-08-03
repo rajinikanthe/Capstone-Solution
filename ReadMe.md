@@ -118,7 +118,7 @@
   eksctl create cluster -f sk-eks-config.yaml
   ````
   ````
-  eksctl get nodes
+  kubectl get nodes
   ````
   ![EKS cluster created and tested if nodes are ready](https://user-images.githubusercontent.com/97882602/181166783-271e62da-dfdb-45db-8b90-daa8532648c5.PNG)
   
