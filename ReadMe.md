@@ -204,7 +204,12 @@
       - sk-capstone-cluster-pub-a
   ````
   
-  ## 2.8 Create namespace "demo" using below command
+  ## 2.8 Create ng using below command
+  ````
+   eksctl create nodegroup --config-file=sk-eks-config.yaml
+  ````
+  
+  ## 2.9 Create namespace "demo" using below command
   ````
   kubectl create ns demo
   ````
