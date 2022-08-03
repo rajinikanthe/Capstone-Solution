@@ -115,7 +115,7 @@
   ## 1.6 Update the VPC and subnet IDs in eks-conf.yaml file from stub siles.
   Run below command to create an eks cluster
   ````
-  eksctl create cluster -f eks-conf.yaml 
+  eksctl create cluster -f sk-eks-config.yaml
   ````
   ````
   eksctl get nodes
@@ -177,7 +177,7 @@
   ````
   The image id should be displayed after docket images command. Make sure you are using the latest image ID.
   
-  ## 2.6 Check if the application is online by hitting "<ec2 ip>:8081" in browser.
+  ## 2.6 Check if the application is online by hitting "ec2 ip:8081" in browser.
   ![4  Docker Container is running and accessible from browser](https://user-images.githubusercontent.com/97882602/181169549-ae96e0e3-dacc-4910-9cd1-1e2b28a56d36.PNG)
 
   
