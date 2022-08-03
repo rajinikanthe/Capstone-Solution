@@ -182,6 +182,27 @@
   ## 2.6 Check if the application is online by hitting "ec2 ip:8081" in browser.
   ![4  Docker Container is running and accessible from browser](https://user-images.githubusercontent.com/97882602/181169549-ae96e0e3-dacc-4910-9cd1-1e2b28a56d36.PNG)
 
+  ## 2.7 Add a node group config to config file:
+  Use the last public node config and update taint config and a new name for the ng
+  ````
+    - name: pub-201-a-2
+    labels: { role: workers }
+    tags:
+      k8s.io/cluster-autoscaler/enabled: "true"
+      k8s.io/cluster-autoscaler/my-eks-201: "shared"
+    taints:
+    - key: "critical"
+      value: "true"
+      effect: NoSchedule
+    instancesDistribution:
+      instanceTypes:
+        - t2.medium
+    desiredCapacity: 0
+    minSize: 0
+    maxSize: 1
+    subnets:
+      - sk-capstone-cluster-pub-a
+  ````
   
   
   
