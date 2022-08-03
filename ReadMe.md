@@ -204,6 +204,13 @@
       - sk-capstone-cluster-pub-a
   ````
   
+  ## 2.8 Create namespace "demo" using below command
+  ````
+  kubectl create ns demo
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/182538152-3afbd289-d3af-4c0a-a390-9f6672be4ec2.png)
+  
+  
   
   
 
