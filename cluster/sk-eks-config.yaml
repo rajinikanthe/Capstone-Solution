@@ -7,21 +7,21 @@ metadata:
   region: us-east-1
   version: "1.20" # kubernetes version
 vpc: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/04-existing-vpc.yaml
-  id: "vpc-0a584d4be140da542"
+  id: "vpc-02843e5c576711070"
   subnets:
     public:
       sk-capstone-cluster-pub-a:
-        id: "subnet-03df17e9cca6dd699"
+        id: "subnet-0a9bfc06c65380c86"
         az: "us-east-1a"
       sk-capstone-cluster-pub-b:
-        id: "subnet-019e6d97f05b38594"
+        id: "subnet-085e2eab39ce11fac"
         az: "us-east-1b"
     private:
       sk-capstone-cluster-pri-a:
-        id: "subnet-0d33222d3135e9372"
+        id: "subnet-09ef398419e072b0f"
         az: "us-east-1a"
       sk-capstone-cluster-pri-b:
-        id: "subnet-049988ce0764cebb8"
+        id: "subnet-08eef4ddc9934deb0"
         az: "us-east-1b"
   clusterEndpoints:
     publicAccess:  true
@@ -85,6 +85,25 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       k8s.io/cluster-autoscaler/enabled: "true"
       k8s.io/cluster-autoscaler/my-eks-201: "shared"
     instancesDistribution:
+      instanceTypes:
+        - t2.medium
+    desiredCapacity: 0
+    minSize: 0
+    maxSize: 1
+    subnets:
+      - sk-capstone-cluster-pub-a
+
+  - name: pub-201-a-1
+    labels: { role: workers }
+    tags:
+      k8s.io/cluster-autoscaler/enabled: "true"
+      k8s.io/cluster-autoscaler/my-eks-201: "shared"
+    instancesDistribution:
+      tolerations:
+        - key: "critical"
+        operator: "Equal"
+        value: "value1"
+        effect: "NoSchedule"
       instanceTypes:
         - t2.medium
     desiredCapacity: 0
