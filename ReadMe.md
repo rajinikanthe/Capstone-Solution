@@ -175,7 +175,7 @@
   docker images
   ````
   ````
-  docker run -it -d -p 8081:8081 <image ID>
+  docker run -itd -p 8081:8081 <image ID>
   ````
   The image id should be displayed after docket images command. Make sure you are using the latest image ID.
   
