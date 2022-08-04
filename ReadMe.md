@@ -153,7 +153,7 @@
   ![image](https://user-images.githubusercontent.com/97882602/181167758-d8a2e423-0be4-4baf-9a16-36de38cbcf82.png)
   
   
-  ## 2.2 Write a Dockerfile to dockerise the upg-loadme nodejs application. 
+  ## 2.2 Write a Dockerfile to dockerise the upg-loadme nodejs application in same folder where app files are located.
   ````
   FROM node:12.18.1
   LABEL maintainer="swapnilkhot36@gmail.com"
