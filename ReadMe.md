@@ -112,7 +112,11 @@
   
   ![Created outputs for VPC and Subet IDs](https://user-images.githubusercontent.com/97882602/181165925-b8f75733-facb-430f-a45e-2a993bdbae07.PNG)
   
-  ## 1.6 Update the VPC and subnet IDs in eks-conf.yaml file from stub siles.
+  ## 1.6 Update the VPC and subnet IDs in eks-conf.yaml file from stub siles. Add the file in Cluster directory.
+  ![image](https://user-images.githubusercontent.com/97882602/182764712-df101186-40f5-424b-93a8-f1ce8709aa52.png)
+  
+  ![image](https://user-images.githubusercontent.com/97882602/182765022-74c143d7-fbe5-4f4c-9d6c-feb5475aa594.png)
+
   Run below command to create an eks cluster
   ````
   eksctl create cluster -f sk-eks-config.yaml
