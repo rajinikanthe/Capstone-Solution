@@ -219,6 +219,44 @@
   ````
   ![image](https://user-images.githubusercontent.com/97882602/182538152-3afbd289-d3af-4c0a-a390-9f6672be4ec2.png)
   
+  ## 2.10 Create yml for deployment. Make sure you update the image ID and toleration spec.
+  ![image](https://user-images.githubusercontent.com/97882602/182796134-31f6931a-945c-4f7e-9ad8-877b8422bbb1.png)
+  
+  ## 2.11 Create yml for hpa. Make sure you update spec as required
+  ![image](https://user-images.githubusercontent.com/97882602/182796342-59b5d1af-a256-45d3-860c-a8f1cacd3a4e.png)
+  
+  ## 2.12 Create yml for ingress. Make sure you update spec as required
+  ![image](https://user-images.githubusercontent.com/97882602/182796588-f1545a78-46e3-47ad-ac27-afb6e047111d.png)
+  
+  ## 2.13 Apply theese yaml files with below commands
+  ````
+  kubectl create -f upg-loadme.yaml --namespace=demo
+  ````
+  ````
+  kubectl create -f upg-loadme-ingress.yaml --namespace=demo
+  ````
+  ````
+  kubectl create -f upg-loadme-hpa.yaml --namespace=demo
+  ````
+  
+  ## 2.14 Ensure the pod is running
+  ````
+  kubectl get pods --namespace=demo
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/182797170-1dc53f48-4ddb-4252-b835-9670c5206402.png)
+  
+  ## 2.15 You can check if the node is tainted as specified
+  ````
+  kubectl describe node describe ip-10-0-101-198.ec2.internal
+  ````
+  
+  ![image](https://user-images.githubusercontent.com/97882602/182797529-a55d5531-4456-48c5-b75f-b54f67e69d29.png)
+
+
+
+  
+
+
   
   
   
