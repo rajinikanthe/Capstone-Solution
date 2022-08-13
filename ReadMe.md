@@ -338,7 +338,7 @@
   # Task 4: Test auto scaling of the application.
 
   ## 4.1 Create yml for hpa. Make sure you update spec as required
-  ![image](https://user-images.githubusercontent.com/97882602/182796342-59b5d1af-a256-45d3-860c-a8f1cacd3a4e.png)
+  ![image](https://user-images.githubusercontent.com/97882602/184498571-70ae7d48-b75a-4389-b82f-50129f8424a7.png)
   
   ````
   kubectl create -f upg-loadme-hpa.yaml --namespace=demo
