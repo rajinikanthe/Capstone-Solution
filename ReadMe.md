@@ -252,7 +252,7 @@
   
   ![image](https://user-images.githubusercontent.com/97882602/182797529-a55d5531-4456-48c5-b75f-b54f67e69d29.png)
   
-  #Task 3:Deploy Redis server on Kubernetes
+  # Task 3:Deploy Redis server on Kubernetes
   ## 3.1 Create redis.yaml
   ````
   resources:
