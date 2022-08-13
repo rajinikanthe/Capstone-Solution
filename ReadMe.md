@@ -345,4 +345,15 @@
   ````
   ![image](https://user-images.githubusercontent.com/97882602/184498064-33896872-c4a7-441f-be4b-ba703c8d44f2.png)
   
+  ## 4.2 Install prometheus usin helm
+  ````
+  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  ````
+  ````
+  helm repo update
+  ````
+  ````
+  helm install capstone-prom  prometheus-commun
+  ````
+  
   
