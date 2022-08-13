@@ -252,7 +252,7 @@
   
   ![image](https://user-images.githubusercontent.com/97882602/182797529-a55d5531-4456-48c5-b75f-b54f67e69d29.png)
   
-  #Task 3:
+  #Task 3:Deploy Redis server on Kubernetes
   ## 3.1 Create redis.yaml
   ````
   resources:
@@ -282,6 +282,70 @@
   ````
   
   ![image](https://user-images.githubusercontent.com/97882602/184496361-c03d778a-8551-483f-93fa-74d9b67c7dce.png)
+  
+  ## 3.4 Confirm if pods are up and running
+  ````
+  kubectl get pods -n demo
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184496406-e6cccbb8-389f-4395-8601-3125c7202685.png)
+  
+  ## 3.5 Create a redis pod
+  ````
+  cluster$ kubectl run redis --image redis  -n demo
+  ````
+  
+  ![image](https://user-images.githubusercontent.com/97882602/184496732-24b71855-cf00-4ac7-b8d7-90a0d65133bc.png)
+
+  ## 3.6 Get services in demo namespace
+  ````
+  kubectl get services -n demo
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184496910-554be343-34d7-4fed-9080-040b225e7eb6.png)
+
+  ## 3.7 Exec redis pod to ssh into it
+  ````
+  kubectl run redis --image redis  -n demo
+  ````
+  ## 3.8 Run below command inside redis pod
+  ````
+  redis-cli -h my-release-redis-master -p 6379
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184497033-8da931ab-ab84-491d-8582-34413c7b44a0.png)
+
+  ## 3.9 Create a variable inside cluster.
+  ````
+  SET foo 1
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184497127-598b9230-cf53-400b-a710-d89113dcf04b.png)
+
+  ## 3.10 Get pods list for the master redis pod name
+  ````
+  kubectl get pods -n demo
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184497421-fa61539f-83f6-4088-8cb6-bcd6a61c2efa.png)
+
+
+  ## 3.11 Delete redis master pod
+  ````
+  kubectl delete pod my-release-redis-master-0 -n demo
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184497445-869e44bb-6911-43c7-8239-f92f217f7ec4.png)
+
+  ## 3.12 The pod will get recreated. Wait for the pod to get up and running.
+  ![image](https://user-images.githubusercontent.com/97882602/184497487-04f18ec2-5df4-4278-8586-034277e62924.png)
+
+  ## 3.12 SSH into the redis pod and confirm if the variable is still there
+  ````
+  GET foo
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184497545-6d95a635-9b67-4acc-8838-97079cfb4f22.png)
+  
+  
+
+  
+  
+  
+
 
 
 
