@@ -251,6 +251,37 @@
   ````
   
   ![image](https://user-images.githubusercontent.com/97882602/182797529-a55d5531-4456-48c5-b75f-b54f67e69d29.png)
+  
+  #Task 3:
+  ## 3.1 Create redis.yaml
+  ````
+  resources:
+  limits:
+       cpu: "200m"
+       memory: "200Mi"
+  auth:
+       enabled: false
+
+  ````
+  ![image](https://user-images.githubusercontent.com/97882602/184495429-4eb973ed-09fa-41f2-beb1-43aac5cd9717.png)
+   
+  ## 3.2 Install helm using below link
+  https://helm.sh/docs/intro/install/
+  
+  ## 3.3 Install redis using below commands
+  ````
+  helm repo add bitnami https://charts.bitnami.com/bitnami
+  ````
+  
+  ````
+  helm search repo redis
+  ````
+  
+  ````
+  helm install my-release bitnami/redis -f redis.yaml -n demo
+  ````
+  
+  ![image](https://user-images.githubusercontent.com/97882602/184496361-c03d778a-8551-483f-93fa-74d9b67c7dce.png)
 
 
 
