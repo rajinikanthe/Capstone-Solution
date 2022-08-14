@@ -13,4 +13,9 @@ aws/
 *awscliv2.zip
 kubectl
 *kubectl.sha256
-
+*get_helm.sh
+*iam-policy.json
+*iam_policy_us-gov.json
+cluster/iam_policy_us-gov.json
+.wget-hsts
+*v2_2_1_full.yaml

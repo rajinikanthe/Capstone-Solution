@@ -7,21 +7,21 @@ metadata:
   region: us-east-1
   version: "1.20" # kubernetes version
 vpc: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/04-existing-vpc.yaml
-  id: "vpc-0441da6c27cceb64d"
+  id: "vpc-03b593cd2c36cf96e"
   subnets:
     public:
       sk-capstone-cluster-pub-a:
-        id: "subnet-02130f4ed3fb5b5c3"
+        id: "subnet-05b10f82da76c1210"
         az: "us-east-1a"
       sk-capstone-cluster-pub-b:
-        id: "subnet-00888374deedd18dc"
+        id: "subnet-00bbda85a8912e735"
         az: "us-east-1b"
     private:
       sk-capstone-cluster-pri-a:
-        id: "subnet-03f69a2d3c242a534"
+        id: "subnet-08a4fc3530f030ba5"
         az: "us-east-1a"
       sk-capstone-cluster-pri-b:
-        id: "subnet-050cb11ad1a7d9537"
+        id: "subnet-01cc27e21fc2cc7d1"
         az: "us-east-1b"
   clusterEndpoints:
     publicAccess:  true
@@ -86,7 +86,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       k8s.io/cluster-autoscaler/my-eks-201: "shared"
     instancesDistribution:
       instanceTypes:
-        - t2.medium
+        - t2.medium 
     desiredCapacity: 1
     minSize: 0
     maxSize: 1
