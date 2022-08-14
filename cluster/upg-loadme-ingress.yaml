@@ -12,7 +12,8 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
   rules:
-  - http:
+  - host: k8s.local
+    http:
       paths:
         - path: /
           pathType: Prefix
