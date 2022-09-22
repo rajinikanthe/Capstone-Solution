@@ -1,5 +1,5 @@
 FROM node:12.18.1
-LABEL maintainer="swapnilkhot36@gmail.com"
+LABEL maintainer="rajinikanth.erugu999@gmail.com"
 ENV NODE_ENV=production
 WORKDIR /app
 COPY ["package.json", "./"]
